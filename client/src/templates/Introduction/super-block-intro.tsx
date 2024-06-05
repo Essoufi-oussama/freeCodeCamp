@@ -250,7 +250,7 @@ const SuperBlockIntroductionPage = (props: SuperBlockProp) => {
                 </>
               )}
               <Spacer size='large' />
-              <h3
+              {/* <h3
                 className='text-center big-block-title'
                 style={{ whiteSpace: 'pre-line' }}
               >
@@ -258,7 +258,7 @@ const SuperBlockIntroductionPage = (props: SuperBlockProp) => {
               </h3>
               <Spacer size='medium' />
               <Map />
-              <Spacer size='large' />
+              <Spacer size='large' /> */}
             </Col>
           </Row>
         </main>

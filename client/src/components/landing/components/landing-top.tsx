@@ -70,7 +70,7 @@ function LandingTop(): JSX.Element {
           </div>
           <Spacer size='medium' />
           <BigCallToAction />
-          <CampersImage pageName='landing' />
+          {/* <CampersImage pageName='landing' /> */}
           <Spacer size='medium' />
         </Col>
       </Row>

@@ -25,24 +25,24 @@ export const ConditionalDonationAlert = ({
     SuperBlocks.SciCompPy
   ];
 
-  if (!isDonating && betaCertifications.includes(superBlock))
-    return (
-      <Alert variant='info' className='annual-donation-alert'>
-        <p>{t('donate.beta-certification')}</p>
-        <hr />
-        <p className={'text-center'}>
-          <Link
-            className='btn'
-            key='donate'
-            sameTab={false}
-            to='/donate'
-            onClick={onCertificationDonationAlertClick}
-          >
-            {t('buttons.donate-now')}
-          </Link>
-        </p>
-      </Alert>
-    );
+  // if (!isDonating && betaCertifications.includes(superBlock))
+  //   return (
+  //     <Alert variant='info' className='annual-donation-alert'>
+  //       <p>{t('donate.beta-certification')}</p>
+  //       <hr />
+  //       <p className={'text-center'}>
+  //         <Link
+  //           className='btn'
+  //           key='donate'
+  //           sameTab={false}
+  //           to='/donate'
+  //           onClick={onCertificationDonationAlertClick}
+  //         >
+  //           {t('buttons.donate-now')}
+  //         </Link>
+  //       </p>
+  //     </Alert>
+  //   );
   return <></>;
 };
 
@@ -74,7 +74,7 @@ function SuperBlockIntro(props: SuperBlockIntroProps): JSX.Element {
         {i18nSuperBlock}
       </h1>
       <Spacer size='medium' />
-      <SuperBlockIcon className='cert-header-icon' superBlock={superBlock} />
+      {/* <SuperBlockIcon className='cert-header-icon' superBlock={superBlock} /> */}
       <Spacer size='medium' />
       {superBlockIntroText.map((str, i) => (
         <p dangerouslySetInnerHTML={{ __html: str }} key={i} />
@@ -84,11 +84,11 @@ function SuperBlockIntro(props: SuperBlockIntroProps): JSX.Element {
           {superBlockNoteText}
         </div>
       )}
-      <ConditionalDonationAlert
+      {/* <ConditionalDonationAlert
         superBlock={superBlock}
         onCertificationDonationAlertClick={onCertificationDonationAlertClick}
         isDonating={isDonating}
-      />
+      /> */}
     </>
   );
 }

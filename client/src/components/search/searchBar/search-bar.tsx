@@ -224,7 +224,7 @@ export class SearchBar extends Component<SearchBarProps, SearchBarState> {
                     translations={{
                       submitTitle: t('icons.magnifier'),
                       resetTitle: t('icons.input-reset'),
-                      placeholder: t('search.placeholder')
+                      placeholder: 'Trouver une formation'
                     }}
                   />
                 </div>

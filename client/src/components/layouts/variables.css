@@ -1,5 +1,5 @@
 :root {
-  --theme-color: #0a0a23;
+  --theme-color: #464686;
   --yellow-gold: #ffbf00;
   --gray-00: #ffffff;
   --gray-05: #f5f6f7;
@@ -14,6 +14,7 @@
   --purple-dark: #5a01a7;
   --yellow-light: #ffc300;
   --yellow-dark: #4d3800;
+  --purple-low: #9b9bdb;
   --blue-light: rgb(153, 201, 255);
   --blue-light-translucent: rgba(153, 201, 255, 0.3);
   --blue-dark: rgb(0, 46, 173);
@@ -43,7 +44,7 @@
   --secondary-color: var(--gray-05);
   --tertiary-color: var(--gray-10);
   --quaternary-color: var(--gray-15);
-  --quaternary-background: var(--gray-75);
+  --quaternary-background: var(--purple-low);
   --tertiary-background: var(--gray-80);
   --secondary-background: var(--gray-85);
   --primary-background: var(--gray-90);
@@ -63,7 +64,7 @@
   --secondary-color: var(--gray-85);
   --tertiary-color: var(--gray-80);
   --quaternary-color: var(--gray-75);
-  --quaternary-background: var(--gray-15);
+  --quaternary-background: var(--purple-low);
   --tertiary-background: var(--gray-10);
   --secondary-background: var(--gray-05);
   --primary-background: var(--gray-00);

@@ -3,21 +3,29 @@
 
 .site-footer {
   color: var(--tertiary-color);
-  background: var(--tertiary-background);
+  background: var(--theme-color);
   line-height: 1.6;
   padding: 40px 15px;
   font-size: 16px;
 }
 
 .footer-top {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30.5em, 1fr));
+  display: flex;
+  gap: 15px;
+}
+
+.text-white{
+  color: white;
 }
 
 @media (max-width: 500px) {
   .footer-top {
     grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
   }
+}
+
+.logo{
+  width: 85px;
 }
 
 .footer-top,

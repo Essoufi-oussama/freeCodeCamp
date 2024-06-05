@@ -85,7 +85,9 @@ function LearnPage({
       <Helmet title={t('metaTags:title')} />
       <Container>
         <Row>
-          <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12}>
+        {/* <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12}> */}
+
+          <Col>
             <Intro
               complete={complete}
               completedChallengeCount={completedChallengeCount}

@@ -10,6 +10,8 @@ import { SuperBlockIcon } from '../../assets/icons/superblock-icon';
 import LinkButton from '../../assets/icons/link-button';
 import { Link, Spacer } from '../helpers';
 import { getSuperBlockTitleForMap } from '../../utils/superblock-map-titles';
+import { getSuperBlockIntroForMap } from '../../utils/superblock-map-intro';
+
 import { showUpcomingChanges } from '../../../config/env.json';
 
 import './map.css';
@@ -19,10 +21,9 @@ interface MapProps {
 }
 
 const linkSpacingStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  gap: '15px'
+    display: 'flex',
+    flexDirection: 'column' as 'column',
+    alignItems: 'center',
 };
 
 const coreCurriculum = [
@@ -43,13 +44,19 @@ function MapLi({
       <li
         data-test-label='curriculum-map-button'
         data-playwright-test-label='curriculum-map-button'
+        className='gray-border'
       >
-        <Link className='btn link-btn btn-lg' to={`/learn/${superBlock}/`}>
-          <div style={linkSpacingStyle}>
-            <SuperBlockIcon className='map-icon' superBlock={superBlock} />
-            {getSuperBlockTitleForMap(superBlock)}
+        <Link className='card-link' to={`/learn/${superBlock}/`} >
+          <div style={linkSpacingStyle} className='card-container' >
+             <SuperBlockIcon className='map-icon ' superBlock={superBlock} />
+            
+            <div className="card-body">
+              <div className='card-title'>{getSuperBlockTitleForMap(superBlock)}</div>
+              <p className="card-text">{getSuperBlockIntroForMap(superBlock)}</p>
+            </div>
+            <button className="details-button">Plus de details</button>
+
           </div>
-          {landing && <LinkButton />}
         </Link>
       </li>
     </>
@@ -64,16 +71,16 @@ function Map({ forLanding = false }: MapProps): React.ReactElement {
       <h2 className={forLanding ? 'big-heading' : ''}>
         {t('landing.core-certs-heading')}
       </h2>
-      <ul>
+      <ul >
         {coreCurriculum.map((superBlock, i) => (
-          <MapLi key={i} superBlock={superBlock} landing={forLanding} />
+          <MapLi key={i}  superBlock={superBlock} landing={forLanding}  />
         ))}
       </ul>
       <Spacer size='medium' />
       <h2 className={forLanding ? 'big-heading' : ''}>
         {t('landing.learn-english-heading')}
       </h2>
-      <ul>
+      <ul >
         {superBlockOrder[SuperBlockStages.English].map((superBlock, i) => (
           <MapLi key={i} superBlock={superBlock} landing={forLanding} />
         ))}
